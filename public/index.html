@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Keeping App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="container mt-5">
+    <div id="auth" class="card p-4">
+      <h2 class="card-title">Login</h2>
+      <div class="form-group">
+        <input type="text" id="username" class="form-control" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" class="form-control" placeholder="Password">
+      </div>
+      <button id="login" class="btn btn-primary">Login</button>
+      <button id="register" class="btn btn-secondary">Register</button>
+    </div>
+    <div id="main" style="display: none;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4">
+        <button id="new-note" class="btn btn-success mr-2">New Note</button>
+        <input type="text" id="search" class="form-control mr-2" placeholder="Search notes">
+        <button id="view-archived" class="btn btn-info mr-2">Archived Notes</button>
+        <button id="view-reminders" class="btn btn-warning">Reminders</button>
+      </nav>
+      <div id="notes" class="row mt-4"></div>
+      <div id="note-form" class="card p-4 mt-4" style="display: none;">
+        <div class="form-group">
+          <textarea id="note-content" class="form-control" placeholder="Note content"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="text" id="note-tags" class="form-control" placeholder="Tags (comma separated)">
+        </div>
+        <div class="form-group">
+          <input type="date" id="note-dueDate" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="color" id="note-color" class="form-control" value="#ffffff">
+        </div>
+        <button id="save-note" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
